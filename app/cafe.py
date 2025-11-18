@@ -10,12 +10,12 @@ class Cafe:
 
     def visit_cafe(self, visitor: dict) -> str:
         if "vaccine" not in visitor:
-            raise NotVaccinatedError("NotVaccinatedError"
-                                     " should be raised with a message")
+            raise NotVaccinatedError("NotVaccinatedError:"
+                                     " the visitor is not vaccinated")
         elif visitor["vaccine"]["expiration_date"] < datetime.date.today():
-            raise OutdatedVaccineError("OutdatedVaccineError"
-                                       " should be raised with a message")
+            raise OutdatedVaccineError("OutdatedVaccineError:"
+                                       " the visitor's vaccine is out of date")
         elif not visitor["wearing_a_mask"]:
-            raise NotWearingMaskError("NotWearingMaskError"
-                                      " should be raised with a message")
+            raise NotWearingMaskError("NotWearingMasвідвідувач без маскиkError: "
+                                      " visitor without a mask")
         return f"Welcome to {self.name}"
