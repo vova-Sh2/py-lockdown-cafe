@@ -16,6 +16,6 @@ class Cafe:
             raise OutdatedVaccineError("OutdatedVaccineError:"
                                        " the visitor's vaccine is out of date")
         elif not visitor["wearing_a_mask"]:
-            raise NotWearingMaskError("NotWearingMasвідвідувач без маскиkError: "
+            raise NotWearingMaskError("NotWearingMaskError: "
                                       " visitor without a mask")
         return f"Welcome to {self.name}"
